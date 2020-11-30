@@ -357,7 +357,7 @@
                             <a class="nav-link" :id="'cloud-tab'+item.Info.id" data-toggle="tab" :href="'#cloud'+item.Info.id" role="tab" :aria-controls="'cloud'+item.Info.id" aria-selected="false">大家都說</a>
                             </li>
                             <li class="nav-item" role="presentation">
-                            <a class="nav-link" :id="'radar-tab'+item.Info.id" data-toggle="tab" :href="'#radar'+item.Info.id" role="tab" :aria-controls="'radar'+item.Info.id" aria-selected="false">屬性圖</a>
+                            <a class="nav-link" :id="'radar-tab'+item.Info.id" data-toggle="tab" :href="'#radar'+item.Info.id" role="tab" :aria-controls="'radar'+item.Info.id" aria-selected="false" @click=" renderRadarChart(item.Info.id)">屬性圖</a>
 
                             </li>
                         </ul>
@@ -395,8 +395,10 @@
                                 </div>
 
                                 <div class="tab-pane fade" :id="'radar'+item.Info.id" role="tabpanel" :aria-labelledby="'radar-tab'+item.Info.id">
-                                    <div class="radar modal-body" :vid="item.Info.id">
-                                        <canvas id="radarChart"></canvas>
+                                    <div class="radar modal-body"  :vid=item.Info.id>
+                                        
+                                        
+                                        <canvas class="radar" :id=item.Info.id ></canvas>
                                 
                                             <!-- radar chart -->
                                         
@@ -502,9 +504,10 @@
         <!-- relative path -->
         <script type="module" src="js/uid.js"></script>
         <script type="text/javascript" src="./js/wordcloud.js"></script>
+        <script type="text/javascript" src="./js/chart.js"></script>
         <script type="text/javascript" src="./js/vue-app.js"></script>
         <script type="text/javascript" src="./js/util.js"></script>
-        <script type="text/javascript" src="./js/chart.js"></script>
+        
     </body>
 
 

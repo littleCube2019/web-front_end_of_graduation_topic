@@ -290,10 +290,58 @@ var vm = new Vue({
           return res ;
           },
 
-      
+        renderRadarChart(vid){
 
+                console.log("this is "+vid);
+                var ctxR = document.getElementById(vid).getContext('2d');
+                
+                var radar = new Chart(ctxR, {
+                type: 'radar',
+                data: {
+                labels: ["娛樂", "留言踴躍", "主角人氣", "深度","基本面","有梗" ],
+                datasets: [{
+                label: "分項分數",
+                data: [0.2,0.3,0.4,0.5,0.6,0.33333],
+                backgroundColor: [
+                'rgba(105, 0, 132, .2)',
+                ],
+                borderColor: [
+                'rgba(200, 99, 132, .7)',
+                ],
+                borderWidth: 2
+                },
 
-      },
+                ]
+                },
+                options: {
+                  responsive: true,
+                  
+                  scale: {
+                              pointLabels: {
+                                  fontSize: 24  //調整字形大小
+                              },
+                              ticks: {
+                                max: 1,
+                                min: 0,
+                                stepSize: 0.1
+                              }
+                       
+                   },
+
+                  legend: {
+                            labels: {
+                                // This more specific font property overrides the global property
+                                fontColor: 'black', //字形大小
+                                fontSize: 24,
+                            }
+                          },
+                    }
+                });
+                      
+            },
+
+          },
+
 
 
     mounted: function(){  // 隨機選出n部影片呈現給使用者
