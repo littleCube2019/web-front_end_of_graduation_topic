@@ -72,6 +72,10 @@
 * add Sort Mode Choosing (**temporarily only in draft html**)
 * click geng will automatically roll to the video part
 
+### Radar chart format
+* move chart.js to vue-app.js => renderRadarChart
+* modify html => attribute :vid
+
 # Note
 ### bootstrap
 
@@ -94,6 +98,10 @@ By controlling "n" in tag (class = "col-md-n")，we can determine width of compo
 And remember to include data.js in html  
 by adding  `<script type="text/javascript" src="js/data.js"></script> `
 
+### :
+屬性前輟加上點，才會做vue變數代換
+如
+`<div :vid = vid>`
 # Bug Fix Experience 
 
 * Cannot read property '\_wrapper' of undefine
