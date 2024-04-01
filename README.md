@@ -1,4 +1,4 @@
-[海報2.pdf](https://github.com/littleCube2019/web-front_end_of_graduation_topic/files/14822824/2.pdf)
+![海報2-1](https://github.com/littleCube2019/web-front_end_of_graduation_topic/assets/52718491/f571931a-3ddd-47c0-bafc-3109e4e5cdf0)
 
 # Work log
 ### First commit 
